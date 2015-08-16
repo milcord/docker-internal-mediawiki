@@ -1,0 +1,32 @@
+db:
+  image: mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=password
+parsoid:
+  image: benhutchins/parsoid
+  ports:
+    - 8000:8000
+  environment:
+    - MW_URL=http://wiki.company.net
+web:
+  image: milcord/internal-mediawiki
+  ports:
+    - 80:80
+    - 443:443
+  volumes:
+    - ./data:/data:rw
+  links:
+    - db
+    - parsoid
+  environment:
+    - MEDIAWIKI_SITE_SERVER=http://wiki.company.net
+    - MEDIAWIKI_SITE_NAME=Company Internal Wiki
+    - MEDIAWIKI_DB_PASSWORD=password
+
+    # This is needed so that after composer has installed the new extensions,
+    # their database changes are processed.
+    - MEDIAWIKI_UPDATE=true
+
+    # Sleep is set to ensure the db container has fully initialized before
+    # start the mediawiki container. If using an external db, remove this.
+    - MEDIAWIKI_SLEEP=30
