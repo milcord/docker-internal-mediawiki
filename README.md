@@ -38,9 +38,9 @@ docker run \
   -p 80:80 \
   --link interwiki-mysql:mysql \
   --link interwiki-parsoid:parsoid \
-  -e MEDIAWIKI_SITE_SERVER="//wiki.company.net" \
+  -e MEDIAWIKI_SITE_SERVER="http://wiki.company.net" \
   -e MEDIAWIKI_SITE_NAME="Company Internal Wiki" \
   -v /local/data/dir:/data:rw \
   -d \
-  milcord/mediawiki
+  milcord/internal-mediawiki
 ```
