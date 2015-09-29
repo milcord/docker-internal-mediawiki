@@ -1,24 +1,31 @@
 [submodule "extensions/Slack"]
 	path = extensions/Slack
 	url = https://github.com/grundleborg/mediawiki-slack.git
+	branch = master
 [submodule "extensions/VisualEditor"]
 	path = extensions/VisualEditor
 	url = https://gerrit.wikimedia.org/r/p/mediawiki/extensions/VisualEditor.git
+	branch = REL1_25
 [submodule "extensions/SemanticForms"]
 	path = extensions/SemanticForms
 	url = git://github.com/wikimedia/mediawiki-extensions-SemanticForms.git
+	branch = REL1_25
 [submodule "extensions/Validator"]
 	path = extensions/Validator
 	url = git://github.com/JeroenDeDauw/Validator.git
 [submodule "extensions/LdapAuthentication"]
 	path = extensions/LdapAuthentication
 	url = https://git.wikimedia.org/git/mediawiki/extensions/LdapAuthentication.git
+	branch = REL1_25
 [submodule "extensions/SemanticMediaWiki"]
 	path = extensions/SemanticMediaWiki
 	url = git://github.com/SemanticMediaWiki/SemanticMediaWiki.git
+	branch = master
 [submodule "extensions/SemanticResultFormats"]
 	path = extensions/SemanticResultFormats
 	url = git://github.com/SemanticMediaWiki/SemanticResultFormats.git
+	branch = master
 [submodule "extensions/ParamProcessor"]
 	path = extensions/ParamProcessor
 	url = https://github.com/JeroenDeDauw/ParamProcessor.git
+	branch = master
