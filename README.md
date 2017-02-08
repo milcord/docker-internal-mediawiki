@@ -30,7 +30,7 @@ docker pull milcord/internal-mediawiki
 
 # Start up mysql and parsoid
 docker run --name interwiki-mysql -e MYSQL_ROOT_PASSWORD=mypassword -d mysql
-docker run --name interwiki-parsoid -p 8000:8000 -e MW_URL="http://wiki.company.net" -d parsoid
+docker run --name interwiki-parsoid -p 8000:8000 -e MW_URL="http://wiki.company.net" -d benhutchins/parsoid
 
 # Now start the wiki
 docker run \
